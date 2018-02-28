@@ -9,7 +9,7 @@ package com.mycompany.java.adv;
  *
  * @author EducaciónIT
  */
-public class JavaApplication1 {
+public class MainApp {
 
     /**
      * @param args the command line arguments
