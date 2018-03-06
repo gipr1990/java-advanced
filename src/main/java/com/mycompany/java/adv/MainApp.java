@@ -5,18 +5,14 @@
  */
 package com.mycompany.java.adv;
 
-/**
- *
- * @author EducaciónIT
- */
 public class MainApp {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        Runnable r1=() -> {
+    public static void main(String[] args) throws InterruptedException {
+
+        Runnable r1 = () -> {
             for (int i=100; i < 200; i++) {
                 System.out.println(i);
             }
@@ -29,8 +25,6 @@ public class MainApp {
         t1.start();
         t2.start();
         
-  
-            
     }
     
 }
