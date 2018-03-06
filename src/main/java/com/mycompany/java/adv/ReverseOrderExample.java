@@ -31,9 +31,9 @@ public class ReverseOrderExample {
 
         @Override
         public void run() {           
-            if (numero < 5) {
+            if (numero != 5) {
                 try {
-                    ReverseRunnable otroHilo = new ReverseRunnable(++numero);
+                    ReverseRunnable otroHilo = new ReverseRunnable(numero+1);
                     Thread t = new Thread(otroHilo);
                     t.start();
                     t.join();
