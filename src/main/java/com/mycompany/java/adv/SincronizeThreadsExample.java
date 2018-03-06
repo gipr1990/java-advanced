@@ -37,7 +37,7 @@ public class SincronizeThreadsExample {
         t9.start();
         t10.start();
                 
-        Thread.sleep(3000);
+        Thread.sleep(8000);
         
         System.out.println("resultado:"+ inc.contador);
                         
@@ -49,8 +49,8 @@ public class SincronizeThreadsExample {
         int contador = 0;
 
         @Override
-        public void run() {
-            for (int i=0; i < 10; i++) {
+        public synchronized void run() {
+            for (int i=0; i < 50; i++) {
                 contador++;
             }
         }
