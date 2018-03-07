@@ -38,17 +38,17 @@ public class ProducerConsumerExample {
         });
         
         
-//        Thread anotherConsumer = new Thread(() -> {
-//            try {
-//                pc.consume();
-//            } catch (InterruptedException ex) {
-//                Logger.getLogger(ProducerConsumerExample.class.getName()).log(Level.SEVERE, null, ex);
-//            }
-//        });
+        Thread anotherConsumer = new Thread(() -> {
+            try {
+                pc.consume();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ProducerConsumerExample.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         
         producer.start();
         consumer.start();
-        //anotherConsumer.start();
+        anotherConsumer.start();
     }
     
     static class PC {
@@ -56,7 +56,7 @@ public class ProducerConsumerExample {
         Logger logger = Logger.getLogger(PC.class.getName());
         
         private LinkedList<Integer> buffer = new LinkedList<>();
-        int capacity = 1;
+        int capacity = 4;
         
         public void produce() throws InterruptedException {
             
